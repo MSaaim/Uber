@@ -11,17 +11,18 @@ import {
 import CustomPlaceResult from '../../components/CustomPlaceResult'
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete'
 import COLORS from '../../assets/clrs/Colors'
+import { useNavigation } from '@react-navigation/native'
 
 
 const DestinationSearch = () => {
 
     const [OriginPlace, setOriginPlace] = useState(null);
     const [DestinationPlace, setDestinationPlace] = useState(null);
-
+    const navigation = useNavigation();
     useEffect(() => {
-        if (OriginPlace, DestinationPlace) {
-            //navigation will be applied here
-            console.warn('Redirect to the Results!!');
+        if (OriginPlace && DestinationPlace) {
+            navigation.navigate('SearchResults',
+                OriginPlace, DestinationPlace)
         }
 
     }, [OriginPlace, DestinationPlace]);
@@ -70,9 +71,7 @@ const DestinationSearch = () => {
                 }}
                 fetchDetails
                 autoFillOnNotFound={true}
-                onFail={(error) => {
-                    console.log(error);
-                }}
+                
                 renderRow={(data) => <CustomPlaceResult data={data} />}
                 predefinedPlaces={[homePlace, workPlace]}
             />
@@ -103,9 +102,7 @@ const DestinationSearch = () => {
                 }}
                 fetchDetails
                 autoFillOnNotFound={true}
-                onFail={(error) => {
-                    console.log(error);
-                }}
+                predefinedPlaces={[homePlace, workPlace]}
                 renderRow={(data) => <CustomPlaceResult data={data} />}
             />
 

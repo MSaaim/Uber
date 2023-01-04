@@ -1,23 +1,32 @@
 import {
     StyleSheet,
-    Text, 
+    Text,
     View
 } from 'react-native'
 import React from 'react';
 import COLORS from '../assets/clrs/Colors';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import Pressable from 'react-native/Libraries/Components/Pressable/Pressable';
+import { useNavigation } from '@react-navigation/native';
+
+
 
 const HomeSearch = () => {
+
+    const navigation = useNavigation();
+    const goToSearch = () => {
+        navigation.navigate('DestinationSearch')
+    }
     return (
-        <View style={styles.mainSearch}>
+        <Pressable onPress={goToSearch} style={styles.mainSearch}>
             <Text style={styles.search}>Where To?</Text>
             <View style={styles.timeContainer}>
                 <AntDesign name={"clockcircle"} size={16} color={"#000"} />
                 <Text style={styles.timeContainerText}>Now</Text>
                 <MaterialIcons name={'keyboard-arrow-down'} size={20} color={COLORS.dark} />
             </View>
-        </View>
+        </Pressable>
     )
 }
 

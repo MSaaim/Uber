@@ -12,13 +12,12 @@ import COLORS from '../assets/clrs/Colors'
 
 const UberTypes = () => {
     const confirm = () => {
-        // console.warn('Confirmed')
 
     }
     return (
         <View style={{ backgroundColor: COLORS.white, height: '100%' }}>
             {typesData.map(type => (
-                <TypeRowUber type={type} />))}
+                <TypeRowUber type={type} key={type.id} />))}
 
             <CustomButton text={'Confirm Ride'} style={styles.CustomButton}
                 onPress={confirm}

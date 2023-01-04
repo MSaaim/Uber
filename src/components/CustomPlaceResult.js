@@ -9,7 +9,6 @@ import COLORS from '../assets/clrs/Colors'
 
 
 const CustomPlaceResult = ({ data }) => {
-  console.log(data)
   return (
     <View style={styles.rowContainer}>
       <View style={styles.iconContainer}>

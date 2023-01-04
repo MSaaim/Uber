@@ -22,7 +22,7 @@ const RouteNavigator = () => {
             >
                 <Stack.Screen name='Home' component={HomeScreen} />
                 <Stack.Screen name='DestinationSearch' component={DestinationSearch} />
-                <Stack.Screen name='SearchResult' component={SearchResults} />
+                <Stack.Screen name='SearchResults' component={SearchResults} />
             </Stack.Navigator>
         </NavigationContainer>
 
