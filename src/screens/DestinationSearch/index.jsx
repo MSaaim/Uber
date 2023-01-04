@@ -104,6 +104,7 @@ const styles = StyleSheet.create({
     container: {
         padding: 10,
         height: '100%',
+        backgroundColor: COLORS.white
     },
     DestinationInput: {
         height: 40,
@@ -123,8 +124,6 @@ const styles = StyleSheet.create({
         top: 35,
         left: 15,
         borderRadius: 25,
-
-
     },
     line: {
         width: 1,
