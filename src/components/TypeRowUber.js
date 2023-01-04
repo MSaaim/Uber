@@ -1,4 +1,9 @@
-import { StyleSheet, Text, View, Image } from 'react-native'
+import {
+    StyleSheet,
+    Text,
+    View,
+    Image
+} from 'react-native'
 import React from 'react'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import COLORS from '../assets/clrs/Colors'
@@ -93,7 +98,7 @@ const styles = StyleSheet.create({
         fontWeight: '500',
         fontSize: 13,
         marginLeft: 5,
-        color:'#000'
+        color: '#000'
 
     }
 })

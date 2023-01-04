@@ -1,4 +1,12 @@
-import { FlatList, Image, Dimensions, ImageBackground, StyleSheet, Text, View } from 'react-native'
+import {
+    FlatList,
+    Image,
+    Dimensions,
+    ImageBackground,
+    StyleSheet,
+    Text,
+    View
+} from 'react-native'
 import React from 'react'
 import COLORS from '../assets/clrs/Colors'
 import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps'; // remove PROVIDER_GOOGLE import if not using Google Maps
@@ -20,6 +28,7 @@ const HomeMap = () => {
             <MapView
                 provider={PROVIDER_GOOGLE} // remove if not using Google Maps
                 style={styles.map}
+                showsUserLocation={true}
                 region={{
                     latitude: 33.6844,
                     longitude: 73.0479,
@@ -35,7 +44,7 @@ const HomeMap = () => {
                             width: 50,
                             height: 50,
                             resizeMode: 'contain',
-                            transform:[{
+                            transform: [{
                                 rotate: `${car.heading}deg`
                             }]
                         }}

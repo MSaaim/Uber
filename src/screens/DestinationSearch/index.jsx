@@ -1,6 +1,13 @@
-import { StyleSheet, Text, View } from 'react-native'
+import {
+    StyleSheet,
+    Text,
+    View
+} from 'react-native'
 import React from 'react'
-import { useState, useEffect } from 'react'
+import {
+    useState,
+    useEffect
+} from 'react'
 import CustomPlaceResult from '../../components/CustomPlaceResult'
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete'
 import COLORS from '../../assets/clrs/Colors'
@@ -17,7 +24,16 @@ const DestinationSearch = () => {
             console.warn('Redirect to the Results!!');
         }
 
-    }, [OriginPlace, DestinationPlace])
+    }, [OriginPlace, DestinationPlace]);
+
+    const homePlace = {
+        description: "Home",
+        geometry: { location: { latitude: 33.6518, longitude: 73.1566 } }
+    }
+    const workPlace = {
+        description: "Work",
+        geometry: { location: { latitude: 33.6425, longitude: 73.9930 } }
+    }
 
     return (
         <View style={styles.container}>
@@ -28,6 +44,9 @@ const DestinationSearch = () => {
                 }}
                 enablePoweredByContainer={false}
                 suppressDefaultStyles
+                currentLocation={true}
+                currentLocationLabel='Current location'
+                renderDescription={(data) => data.description || data.vicinity}
                 styles={{
                     textInput: styles.DestinationInput,
                     container: {
@@ -55,6 +74,7 @@ const DestinationSearch = () => {
                     console.log(error);
                 }}
                 renderRow={(data) => <CustomPlaceResult data={data} />}
+                predefinedPlaces={[homePlace, workPlace]}
             />
 
             <GooglePlacesAutocomplete

@@ -1,4 +1,8 @@
-import { StyleSheet, Text, View } from 'react-native'
+import {
+    StyleSheet,
+    Text,
+    View
+} from 'react-native'
 import React from 'react'
 import Entypo from 'react-native-vector-icons/Entypo';
 import COLORS from '../assets/clrs/Colors';
@@ -30,7 +34,7 @@ const styles = StyleSheet.create({
     },
 
     iconContainer: {
-        backgroundColor: '#27f',
+        backgroundColor: COLORS.blue,
         padding: 10,
         borderRadius: 25,
 

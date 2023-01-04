@@ -1,4 +1,8 @@
-import { StyleSheet, Text, View } from 'react-native'
+import {
+    StyleSheet,
+    Text,
+    View
+} from 'react-native'
 import React from 'react'
 import HomeMap from '../../components/HomeMap'
 import HomeSearch from '../../components/HomeSearch'

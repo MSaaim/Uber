@@ -1,4 +1,9 @@
-import { Pressable, StyleSheet, Text, View } from 'react-native'
+import {
+    Pressable,
+    StyleSheet,
+    Text,
+    View
+} from 'react-native'
 import React from 'react'
 import TypeRowUber from './TypeRowUber'
 import typesData from '../assets/data/types'

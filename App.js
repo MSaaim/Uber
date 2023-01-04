@@ -1,9 +1,21 @@
-import { Button, PermissionsAndroid, Platform, StatusBar, StyleSheet, Text, View } from 'react-native'
+import 'react-native-gesture-handler'
+import {
+  Button,
+  PermissionsAndroid,
+  Platform,
+  StatusBar,
+  StyleSheet,
+  Text,
+  View
+} from 'react-native'
 import React from 'react'
 import HomeScreen from './src/screens/HomeScreen';
 import DestinationSearch from './src/screens/DestinationSearch';
 import SearchResults from './src/screens/SearchResults';
 import { useEffect } from 'react';
+import RouteNavigator from './src/navigation/RouteNavigator'
+
+navigator.geolocation = require('@react-native-community/geolocation');
 
 const App = () => {
 
@@ -24,27 +36,28 @@ const App = () => {
       } else {
         console.log("Access Denied");
       }
-    }catch(errr){
+    } catch (errr) {
       console.log.warn(errr);
     }
   }
 
   useEffect(() => {
-    if(Platform.OS === 'android'){
-        androidPermission();
-    }else{
+    if (Platform.OS === 'android') {
+      androidPermission();
+    } else {
       //ask for iOS
+      // Geolocation.requestAuthorization();
     }
     return () => {
-      
+
     };
   }, []);
 
   return (
-    <View>
+    <>
       <StatusBar barStyle={"dark-content"} backgroundColor={"#fff"} />
-      <DestinationSearch />
-    </View>
+      <RouteNavigator />
+    </>
   )
 }
 

@@ -1,4 +1,8 @@
-import { StyleSheet, Text, View } from 'react-native'
+import {
+    StyleSheet,
+    Text, 
+    View
+} from 'react-native'
 import React from 'react';
 import COLORS from '../assets/clrs/Colors';
 import AntDesign from 'react-native-vector-icons/AntDesign';
@@ -22,7 +26,7 @@ export default HomeSearch
 const styles = StyleSheet.create({
 
     mainSearch: {
-        backgroundColor: COLORS.search,
+        backgroundColor: COLORS.grey,
         margin: 10,
         padding: 10,
         flexDirection: 'row',
@@ -32,7 +36,7 @@ const styles = StyleSheet.create({
 
     },
     search: {
-        color: '#6e6e6e',
+        color: COLORS.dark,
         fontSize: 16,
         fontWeight: '600',
     },
