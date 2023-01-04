@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   chevronContainer: {
-    backgroundColor: COLORS.theme,
+    backgroundColor: COLORS.dark,
     borderRadius: 15,
   },
 

@@ -1,8 +1,9 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { useState, useEffect } from 'react'
-import CustomInput from '../../components/CustomInput'
+import CustomPlaceResult from '../../components/CustomPlaceResult'
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete'
+import COLORS from '../../assets/clrs/Colors'
 
 
 const DestinationSearch = () => {
@@ -21,12 +22,28 @@ const DestinationSearch = () => {
     return (
         <View style={styles.container}>
             <GooglePlacesAutocomplete
-                placeholder='From'
+                placeholder='Where From?'
                 onPress={(data, details) => {
                     setOriginPlace({ data, details });
                 }}
+                enablePoweredByContainer={false}
+                suppressDefaultStyles
                 styles={{
-                    textInput: styles.DestinationInput
+                    textInput: styles.DestinationInput,
+                    container: {
+                        position: 'absolute',
+                        top: 10,
+                        left: 10,
+                        right: 10,
+                    },
+                    listView: {
+                        position: 'absolute',
+                        top: 100
+                    },
+                    separator: {
+                        backgroundColor: COLORS.grey,
+                        height: 1
+                    }
                 }}
                 query={{
                     key: 'AIzaSyA0JE8wt9-CGmaQjdALcrz61dtGybuStV4',
@@ -37,6 +54,7 @@ const DestinationSearch = () => {
                 onFail={(error) => {
                     console.log(error);
                 }}
+                renderRow={(data) => <CustomPlaceResult data={data} />}
             />
 
             <GooglePlacesAutocomplete
@@ -44,8 +62,20 @@ const DestinationSearch = () => {
                 onPress={(data, details) => {
                     setDestinationPlace({ data, details });
                 }}
+                enablePoweredByContainer={false}
+                suppressDefaultStyles
                 styles={{
-                    textInput: styles.DestinationInput
+                    textInput: styles.DestinationInput,
+                    container: {
+                        position: 'absolute',
+                        top: 60,
+                        left: 10,
+                        right: 10,
+                    },
+                    separator: {
+                        backgroundColor: COLORS.grey,
+                        height: 1
+                    }
                 }}
                 query={{
                     key: 'AIzaSyA0JE8wt9-CGmaQjdALcrz61dtGybuStV4',
@@ -56,7 +86,14 @@ const DestinationSearch = () => {
                 onFail={(error) => {
                     console.log(error);
                 }}
+                renderRow={(data) => <CustomPlaceResult data={data} />}
             />
+
+            {/* Dot styles circle and a square near input fields also a line */}
+            <View style={styles.circle} />
+            <View style={styles.line} />
+            <View style={styles.square} />
+
         </View>
     )
 }
@@ -67,15 +104,42 @@ const styles = StyleSheet.create({
     container: {
         padding: 10,
         height: '100%',
-
-
     },
     DestinationInput: {
-        height: 50,
+        height: 40,
         backgroundColor: '#eee',
         marginVertical: 5,
         padding: 10,
         borderBottomWidth: 1,
-        borderBottomColor: '#000'
+        borderBottomColor: COLORS.grey,
+        borderRadius: 10,
+        marginLeft: 25
+    },
+    circle: {
+        width: 5,
+        height: 5,
+        backgroundColor: COLORS.dark,
+        position: 'absolute',
+        top: 35,
+        left: 15,
+        borderRadius: 25,
+
+
+    },
+    line: {
+        width: 1,
+        height: 45,
+        backgroundColor: COLORS.green,
+        position: 'absolute',
+        top: 40,
+        left: 16.8,
+    },
+    square: {
+        width: 5,
+        height: 5,
+        backgroundColor: COLORS.dark,
+        position: 'absolute',
+        top: 85,
+        left: 15,
     }
 })

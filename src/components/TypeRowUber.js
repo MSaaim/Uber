@@ -41,7 +41,7 @@ const TypeRowUber = (props) => {
 
 
             <View style={styles.rightContainer}>
-                <Ionicons name={'pricetag'} size={16} color={'#20fe78'} />
+                <Ionicons name={'pricetag'} size={16} color={COLORS.green} />
                 <Text style={styles.price}>est. Rs{type.price}</Text>
             </View>
         </View>
@@ -85,13 +85,15 @@ const styles = StyleSheet.create({
     rightContainer: {
         width: 100,
         justifyContent: 'flex-end',
-        flexDirection: 'row'
+        flexDirection: 'row',
+        color: '#000'
 
     },
     price: {
         fontWeight: '500',
-        fontSize: 14,
+        fontSize: 13,
         marginLeft: 5,
+        color:'#000'
 
     }
 })

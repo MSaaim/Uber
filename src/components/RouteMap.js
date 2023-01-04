@@ -20,7 +20,7 @@ const RouteMap = () => {
             <MapView
                 provider={PROVIDER_GOOGLE} // remove if not using Google Maps
                 style={styles.map}
-                initialregion={{
+                region={{
                     latitude: 33.6844,
                     longitude: 73.0479,
                     latitudeDelta: 0.10,
