@@ -9,21 +9,25 @@ import HomeScreen from '../screens/HomeScreen'
 import DestinationSearch from '../screens/DestinationSearch'
 import SearchResults from '../screens/SearchResults'
 import { createStackNavigator } from '@react-navigation/stack'
+import HomeNavigator from './HomeNavigator'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
+
+
+
 
 const RouteNavigator = () => {
     return (
+
         <NavigationContainer>
-            <Stack.Navigator
-            screenOptions={{
-                headerShown: false
-            }}
-            >
-                <Stack.Screen name='Home' component={HomeScreen} />
-                <Stack.Screen name='DestinationSearch' component={DestinationSearch} />
-                <Stack.Screen name='SearchResults' component={SearchResults} />
-            </Stack.Navigator>
+            <Tab.Navigator
+                screenOptions={{
+                    headerShown: false
+                }}>
+                <Tab.Screen name="Home" component={HomeScreen} />
+                <Tab.Screen name="Settings" component={SearchResults} />
+            </Tab.Navigator>
         </NavigationContainer>
 
     )

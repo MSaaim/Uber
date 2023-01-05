@@ -14,6 +14,7 @@ import DestinationSearch from './src/screens/DestinationSearch';
 import SearchResults from './src/screens/SearchResults';
 import { useEffect } from 'react';
 import RouteNavigator from './src/navigation/RouteNavigator'
+import HomeNavigator from './src/navigation/HomeNavigator';
 
 navigator.geolocation = require('@react-native-community/geolocation');
 
@@ -56,6 +57,7 @@ const App = () => {
   return (
     <>
       <StatusBar barStyle={"dark-content"} backgroundColor={"#fff"} />
+      <HomeNavigator/>
       <RouteNavigator />
     </>
   )

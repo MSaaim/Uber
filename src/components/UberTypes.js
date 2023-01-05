@@ -41,12 +41,16 @@ const styles = StyleSheet.create({
         color: '#fff',
         borderRadius: 10,
         height: 50,
+        width:300,
+        position:'absolute',
+        top: 290,
+        left:20
 
     },
     Pressable: {
         backgroundColor: COLORS.dark,
         padding: 10,
-        margin: 10,
+        margin: 1,
         alignItems: 'center',
     }
 
