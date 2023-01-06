@@ -10,19 +10,15 @@ import { NavigationContainer } from '@react-navigation/native'
 const Stack = createStackNavigator();
 const HomeNavigator = () => {
   return (
-    <NavigationContainer>
-<Stack.Navigator
-    screenOptions={{
-        headerShown: false
-    }}
-    >
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false
+        }}
+      >
         <Stack.Screen name='Home' component={HomeScreen} />
         <Stack.Screen name='DestinationSearch' component={DestinationSearch} />
         <Stack.Screen name='SearchResults' component={SearchResults} />
-    </Stack.Navigator>
-
-    </NavigationContainer>
-    
+      </Stack.Navigator>
   )
 }
 

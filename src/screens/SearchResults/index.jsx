@@ -9,12 +9,15 @@ import UberTypes from '../../components/UberTypes'
 import RouteMap from '../../components/RouteMap'
 import { useRoute } from '@react-navigation/native'
 
-const SearchResults = () => {
-  const route = useRoute();
-  console.log(route.params);
+const SearchResults = (props) => {
+
+  console.log(props);
+
+
+
   return (
     <View>
-      <RouteMap />
+      <RouteMap origin={props.route.params.OriginPlace} destination={props.route.params.DestinationPlace} />
 
 
       <UberTypes />

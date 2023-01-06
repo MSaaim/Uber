@@ -22,7 +22,7 @@ const DestinationSearch = () => {
     useEffect(() => {
         if (OriginPlace && DestinationPlace) {
             navigation.navigate('SearchResults',
-                OriginPlace, DestinationPlace)
+                {OriginPlace, DestinationPlace})
         }
 
     }, [OriginPlace, DestinationPlace]);
@@ -31,10 +31,7 @@ const DestinationSearch = () => {
         description: "Home",
         geometry: { location: { latitude: 33.6518, longitude: 73.1566 } }
     }
-    const workPlace = {
-        description: "Work",
-        geometry: { location: { latitude: 33.6425, longitude: 73.9930 } }
-    }
+    
 
     return (
         <View style={styles.container}>
@@ -73,7 +70,7 @@ const DestinationSearch = () => {
                 autoFillOnNotFound={true}
                 
                 renderRow={(data) => <CustomPlaceResult data={data} />}
-                predefinedPlaces={[homePlace, workPlace]}
+                predefinedPlaces={[homePlace]}
             />
 
             <GooglePlacesAutocomplete
@@ -102,7 +99,7 @@ const DestinationSearch = () => {
                 }}
                 fetchDetails
                 autoFillOnNotFound={true}
-                predefinedPlaces={[homePlace, workPlace]}
+                predefinedPlaces={[homePlace]}
                 renderRow={(data) => <CustomPlaceResult data={data} />}
             />
 

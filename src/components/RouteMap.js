@@ -13,20 +13,24 @@ import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps'; // remove 
 import cars from '../assets/data/cars'
 import MapViewDirections from 'react-native-maps-directions';
 
-const RouteMap = () => {
-    const origin = {
-        latitude: 33.6880,
-        longitude: 73.1097,
-    };
-    const destination = {
-        latitude: 33.6677,
-        longitude: 73.0752,
+const RouteMap = ({origin, destination} ) => {
+    console.log(origin.details.geometry.location)
+    const originLoc = {
+        latitude:  origin?.details?.geometry?.location?.lat ?  origin?.details?.geometry?.location?.lat : origin?.details?.geometry?.location?.latitude,
+        longitude: origin?.details?.geometry?.location?.lng ? origin?.details?.geometry?.location?.lng : origin?.details?.geometry?.location?.longitude
     }
+    console.log(originLoc)
+
+    const destinationLoc = {
+        latitude: destination?.details?.geometry?.location?.lat ? destination?.details?.geometry?.location?.lat : destination?.details?.geometry?.location?.latitude,
+        longitude: destination?.details?.geometry?.location?.lng ? destination?.details?.geometry?.location?.lng : destination?.details?.geometry?.location?.longitude
+    }
+    console.log(destinationLoc)
 
     return (
         <View style={styles.container}>
             <MapView
-                provider={PROVIDER_GOOGLE} // remove if not using Google Maps
+                provider={PROVIDER_GOOGLE} 
                 style={styles.map}
                 showsUserLocation={true}
                 region={{
@@ -36,20 +40,24 @@ const RouteMap = () => {
                     longitudeDelta: 0.120,
                 }}
             >
+
                 <MapViewDirections
-                    origin={origin}
-                    destination={destination}
+                    origin={originLoc}
+                    destination={destinationLoc}
                     apikey={'AIzaSyA0JE8wt9-CGmaQjdALcrz61dtGybuStV4'}
                     strokeWidth={2.5}
                     strokeColor="blue"
+
                 />
                 <Marker
-                    coordinate={origin}
+                    coordinate={originLoc}
                     title={"Origin"}
+
                 />
                 <Marker
-                    coordinate={destination}
+                    coordinate={destinationLoc}
                     title={"Destination"}
+
                 />
 
             </MapView>

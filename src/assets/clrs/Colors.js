@@ -7,7 +7,9 @@ const COLORS = {
     secondarylight: '#B4AEE8',
     lightfont: '#1c1c1c',
     green: '#2fdb5a',
-    blue: '#21f'
+    blue: '#21f',
+    activeTintColor:'#000',
+    inactiveTintColor:'#c0c0c0'
 }
 
 export default COLORS;
