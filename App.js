@@ -18,9 +18,10 @@ import HomeNavigator from './src/navigation/HomeNavigator';
 
 navigator.geolocation = require('@react-native-community/geolocation');
 
-import Amplify from 'aws-amplify';
-import config from './src/aws-exports'
-Amplify.configure(config)
+import { Amplify } from 'aws-amplify';
+import awsconfig from './src/aws-exports';
+
+Amplify.configure(awsconfig);
 
 const App = () => {
 

@@ -5,7 +5,7 @@ const COLORS = {
     search: '#ccc',
     light: '#f9f9f9',
     secondarylight: '#B4AEE8',
-    lightfont: '#1c1c1c',
+    greyfont: "#cacaca",
     green: '#2fdb5a',
     blue: '#21f',
     activeTintColor:'#000',

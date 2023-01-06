@@ -13,6 +13,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeNavigator from './HomeNavigator'
 import COLORS from '../assets/clrs/Colors'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import SettingsScreen from '../screens/SettingsScreen'
 
 
 const Stack = createStackNavigator();
@@ -33,11 +34,7 @@ const HelpScreen = (props) => {
         <Text>Help</Text>
     </View>
 }
-const SettingsScreen = (props) => {
-    <View style={{ justifyContent: 'center', alignItems: 'center', backgroundColor: 'black' }}>
-        <Text>Settings</Text>
-    </View>
-}
+
 
 
 const RouteNavigator = () => {
