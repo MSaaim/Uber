@@ -11,28 +11,13 @@ import HomeNavigator from './HomeNavigator'
 import COLORS from '../assets/clrs/Colors'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import SettingsScreen from '../screens/SettingsScreen'
+import ChatScreen from '../screens/ChatScreen';
+import WalletScreen from '../screens/WalletScreen.jsx';
+import HistoryScreen from '../screens/HistoryScreen';
 
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
-
-const DummyScreen = (props) => {
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'black' }}>
-        <Text>History</Text>
-    </View>
-}
-const WalletScreen = (props) => {
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'black' }}>
-        <Text>Wallet</Text>
-    </View>
-}
-const HelpScreen = (props) => {
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'black' }}>
-        <Text>Help</Text>
-    </View>
-}
-
-
 
 const RouteNavigator = () => {
     return (
@@ -75,13 +60,16 @@ const RouteNavigator = () => {
                 />
                 <Tab.Screen
                     name="History"
-                    component={DummyScreen}
+                    component={HistoryScreen}
 
                 />
 
                 <Tab.Screen
                     name="Chat"
-                    component={HelpScreen} />
+                    component={ChatScreen}
+
+                />
+
                 <Tab.Screen
                     name="Wallet"
                     component={WalletScreen}
