@@ -6,35 +6,49 @@ import {
 } from 'react-native'
 import React from 'react'
 import COLORS from '../../assets/clrs/Colors'
-import { BorderlessButton } from 'react-native-gesture-handler'
 import Ionicons from 'react-native-vector-icons/Ionicons'
+import CustomButton from '../../components/CustomButton'
+import { Auth } from 'aws-amplify'
 
 
 const SettingsScreen = () => {
+
     return (
-        <View style={styles.mainContainer}>
 
-            <View stylele={styles.userContainer}>
-                <View style={styles.userProf}></View>
+        <View>
+            <View style={styles.mainContainer}>
 
-                <Text style={styles.userName}>Muhammad Saaim</Text>
+                <View stylele={styles.userContainer}>
+                    <View style={styles.userProf}></View>
 
-                <View style={{ flexDirection: 'row' }}>
-                    <Text style={styles.star}>5.00 </Text>
-                    <Ionicons name="ios-star" size={14} color="#fff" />
+                    <Text style={styles.userName}>Muhammad Saaim</Text>
+
+                    <View style={{ flexDirection: 'row' }}>
+                        <Text style={styles.star}>5.00 </Text>
+                        <Ionicons name="ios-star" size={14} color="#fff" />
+                    </View>
+
                 </View>
 
+                <Pressable onPress={() => { console.warn("hello 1") }}>
+                    <Text style={styles.doMore}>Do More with your Account!!</Text>
+                </Pressable>
+
+                <Pressable onPress={() => { console.warn("hello 2") }}>
+                    <Text style={styles.moneyDriving}>Make Money Driving</Text>
+                </Pressable>
             </View>
 
-            <Pressable onPress={() => { console.warn("hello 1") }}>
-                <Text style={styles.doMore}>Do More with your Account!!</Text>
-            </Pressable>
+            <CustomButton
+            onPress={()=>{Auth.signOut()}}
+                text={'Sign Out'}
+                style={styles.CustomButton}
+                
 
-            <Pressable onPress={() => { console.warn("hello 2") }}>
-                <Text style={styles.moneyDriving}>Make Money Driving</Text>
-            </Pressable>
+            />
 
         </View>
+
     )
 }
 
@@ -76,5 +90,16 @@ const styles = StyleSheet.create({
     moneyDriving: {
         color: COLORS.white,
         paddingVertical: 6,
+    },
+    CustomButton: {
+        backgroundColor: COLORS.logoutRed,
+        color: '#fff',
+        borderRadius: 10,
+        height: 50,
+        width: 300,
+        position: 'absolute',
+        top: 600,
+        left: 20
+
     },
 })

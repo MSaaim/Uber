@@ -9,7 +9,8 @@ const COLORS = {
     green: '#2fdb5a',
     blue: '#21f',
     activeTintColor:'#000',
-    inactiveTintColor:'#c0c0c0'
+    inactiveTintColor:'#c0c0c0',
+    logoutRed: '#ff4444',
 }
 //GraphQL API KEY: da2-aiamlokunjahhddkzsc4h4cv4a 
 
