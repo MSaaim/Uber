@@ -64,6 +64,6 @@ const App = () => {
   )
 }
 
-export default App
+export default withAuthenticator(App)
 
 const styles = StyleSheet.create({})
