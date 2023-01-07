@@ -9,12 +9,9 @@ import {
   View
 } from 'react-native'
 import React from 'react'
-import HomeScreen from './src/screens/HomeScreen';
-import DestinationSearch from './src/screens/DestinationSearch';
-import SearchResults from './src/screens/SearchResults';
 import { useEffect } from 'react';
 import RouteNavigator from './src/navigation/RouteNavigator'
-import HomeNavigator from './src/navigation/HomeNavigator';
+import { withAuthenticator } from 'aws-amplify-react-native';
 
 navigator.geolocation = require('@react-native-community/geolocation');
 

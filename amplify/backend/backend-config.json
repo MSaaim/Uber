@@ -1,4 +1,39 @@
 {
+  "api": {
+    "uber": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "uber9117fee49117fee4"
+        }
+      ],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [
+            {
+              "apiKeyConfig": {
+                "apiKeyExpirationDate": "2024-01-07T00:07:28.339Z",
+                "apiKeyExpirationDays": 365,
+                "description": "Uber GraphQL API key"
+              },
+              "authenticationType": "API_KEY"
+            }
+          ],
+          "defaultAuthentication": {
+            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+            "userPoolConfig": {
+              "userPoolId": "authuber9117fee49117fee4"
+            }
+          }
+        }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync"
+    }
+  },
   "auth": {
     "uber9117fee49117fee4": {
       "customAuth": false,
@@ -40,6 +75,24 @@
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_uber9117fee49117fee4PostConfirmation_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "uber9117fee49117fee4PostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_uber9117fee49117fee4PostConfirmation_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "uber9117fee49117fee4PostConfirmation"
+        }
+      ]
     }
   }
 }

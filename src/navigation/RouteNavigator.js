@@ -5,9 +5,6 @@ import {
 } from 'react-native'
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
-import HomeScreen from '../screens/HomeScreen'
-import DestinationSearch from '../screens/DestinationSearch'
-import SearchResults from '../screens/SearchResults'
 import { createStackNavigator } from '@react-navigation/stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeNavigator from './HomeNavigator'
