@@ -44,7 +44,6 @@ const SettingsScreen = () => {
                 text={'Sign Out'}
                 style={styles.CustomButton}
                 
-
             />
 
         </View>

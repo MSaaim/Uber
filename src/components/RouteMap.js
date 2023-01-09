@@ -12,11 +12,12 @@ import COLORS from '../assets/clrs/Colors'
 import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps'; // remove PROVIDER_GOOGLE import if not using Google Maps
 import cars from '../assets/data/cars'
 import MapViewDirections from 'react-native-maps-directions';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
-const RouteMap = ({origin, destination} ) => {
+const RouteMap = ({ origin, destination }) => {
     console.log(origin.details.geometry.location)
     const originLoc = {
-        latitude:  origin?.details?.geometry?.location?.lat ?  origin?.details?.geometry?.location?.lat : origin?.details?.geometry?.location?.latitude,
+        latitude: origin?.details?.geometry?.location?.lat ? origin?.details?.geometry?.location?.lat : origin?.details?.geometry?.location?.latitude,
         longitude: origin?.details?.geometry?.location?.lng ? origin?.details?.geometry?.location?.lng : origin?.details?.geometry?.location?.longitude
     }
     console.log(originLoc)
@@ -30,7 +31,7 @@ const RouteMap = ({origin, destination} ) => {
     return (
         <View style={styles.container}>
             <MapView
-                provider={PROVIDER_GOOGLE} 
+                provider={PROVIDER_GOOGLE}
                 style={styles.map}
                 showsUserLocation={true}
                 region={{
@@ -45,21 +46,23 @@ const RouteMap = ({origin, destination} ) => {
                     origin={originLoc}
                     destination={destinationLoc}
                     apikey={'AIzaSyA0JE8wt9-CGmaQjdALcrz61dtGybuStV4'}
-                    strokeWidth={2.5}
-                    strokeColor="blue"
+                    strokeWidth={3}
+                    strokeColor='#d36705'
 
                 />
                 <Marker
                     coordinate={originLoc}
                     title={"Origin"}
-
-                />
+                >
+                    <View><MaterialIcons name={"circle"} size={15} color={"black"} /></View>
+                </Marker>
                 <Marker
                     coordinate={destinationLoc}
                     title={"Destination"}
 
-                />
-
+                >
+                    <View><MaterialIcons name={"location-on"} size={25} color={"black"} /></View>
+                </Marker>
             </MapView>
         </View>
     )
@@ -81,6 +84,6 @@ const styles = StyleSheet.create({
         width: 50,
         height: 50,
         resizeMode: 'contain'
-
-    }
+    },
+    
 })

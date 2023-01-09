@@ -9,7 +9,7 @@ import {
 // Variables
 import COLORS from '../../src/assets/clrs/Colors'
 
-const CustomButton = ({ onPress, text, type = "PRIMARY", container, style }) => {
+const CustomButton = ({ onPress, text, type = "PRIMARY", container, style, icon}) => {
   return (
     <TouchableOpacity onPress={onPress} style={[styles.container, styles[`container_${type}`], style]}>
       <View style={styles.btnTextContainer}>

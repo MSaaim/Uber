@@ -14,7 +14,7 @@ const HomeCard = () => {
                 <View style={styles.iconContainer}>
                     <Entypo name={'home'} size={16} color={'#fff'} />
                 </View>
-                <Text style={styles.prevDest}> Karachi Company Bus Stop</Text>
+                <Text style={styles.prevDest}> COMSATS University Islamabad</Text>
 
             </View>
         </View>
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     },
 
     iconContainer: {
-        backgroundColor: COLORS.blue,
+        backgroundColor: COLORS.orange,
         padding: 10,
         borderRadius: 25,
 
