@@ -30,8 +30,8 @@ const HomeMap = () => {
                 style={styles.map}
                 showsUserLocation={true}
                 region={{
-                    latitude: 33.6844,
-                    longitude: 73.0479,
+                    latitude: 33.6518,
+                    longitude: 73.1566,
                     latitudeDelta: 0.10,
                     longitudeDelta: 0.120,
                 }}

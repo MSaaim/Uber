@@ -1,14 +1,14 @@
-import { StyleSheet, Text, View } from 'react-native'
+import {
+  StyleSheet,
+  Text,
+  View
+} from 'react-native'
 import React from 'react'
-import CustomButton from '../../components/CustomButton'
 import COLORS from '../../assets/clrs/Colors'
 import { TouchableOpacity } from 'react-native-gesture-handler'
-import Pressable from 'react-native/Libraries/Components/Pressable/Pressable'
 import Entypo from 'react-native-vector-icons/Entypo';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import { Colors } from 'react-native/Libraries/NewAppScreen'
-import LinearGradient from 'react-native-linear-gradient'
-import { Svg, Circle, G, RadialGradient, Stop } from 'react-native-svg';
+
 
 
 const WalletScreen = () => {

@@ -1,5 +1,6 @@
 import React from 'react'
 import {
+  Keyboard,
   StyleSheet,
   TextInput,
   View
@@ -9,7 +10,20 @@ import {
 import COLORS from '../../src/assets/clrs/Colors'
 
 
-const CustomInput = ({ value, setValue, placeholder, secureTextEntry, iconName, isEnable = true, autoFocus = false, inputType = 'default', multiline = false, numberofLines = 1, inputStyle, style }) => {
+const CustomInput = ({
+  value,
+  setValue,
+  placeholder,
+  secureTextEntry,
+  iconName,
+  isEnable = true,
+  autoFocus = false,
+  inputType = 'default',
+  multiline = false,
+  numberofLines = 1,
+  inputStyle,
+  style
+}) => {
   return (
     <View style={styles.container}>
       <TextInput
@@ -24,7 +38,6 @@ const CustomInput = ({ value, setValue, placeholder, secureTextEntry, iconName, 
         multiline={multiline}
         numberOfLines={numberofLines}
         selectionColor={COLORS.secondarylight}
-
       />
     </View>
   )
