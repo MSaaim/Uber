@@ -9,6 +9,7 @@ import COLORS from '../../assets/clrs/Colors'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import CustomButton from '../../components/CustomButton'
 import { Auth } from 'aws-amplify'
+import Feather from 'react-native-vector-icons/Feather'
 
 
 const SettingsScreen = () => {
@@ -19,7 +20,9 @@ const SettingsScreen = () => {
             <View style={styles.mainContainer}>
 
                 <View stylele={styles.userContainer}>
-                    <View style={styles.userProf}></View>
+                    <View style={styles.userProf}>
+                        <Feather name={'user'} size={36} color={'#000'} />
+                    </View>
 
                     <Text style={styles.userName}>Muhammad Saaim</Text>
 
@@ -40,10 +43,10 @@ const SettingsScreen = () => {
             </View>
 
             <CustomButton
-            onPress={()=>{Auth.signOut()}}
+                onPress={() => { Auth.signOut() }}
                 text={'Sign Out'}
                 style={styles.CustomButton}
-                
+
             />
 
         </View>
@@ -64,11 +67,13 @@ const styles = StyleSheet.create({
     userProf: {
         height: 60,
         width: 60,
-        backgroundColor: COLORS.blue,
+        backgroundColor: COLORS.orange,
         borderRadius: 100,
         borderWidth: 1,
         borderBottomColor: COLORS.green,
-        marginVertical: 10
+        marginVertical: 10,
+        justifyContent: 'center',
+        alignItems: 'center'
 
     },
     userName: {
