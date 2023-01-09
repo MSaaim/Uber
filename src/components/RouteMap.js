@@ -47,21 +47,21 @@ const RouteMap = ({ origin, destination }) => {
                     destination={destinationLoc}
                     apikey={'AIzaSyA0JE8wt9-CGmaQjdALcrz61dtGybuStV4'}
                     strokeWidth={3}
-                    strokeColor='#d36705'
+                    strokeColor='#000'
 
                 />
                 <Marker
                     coordinate={originLoc}
                     title={"Origin"}
                 >
-                    <View><MaterialIcons name={"circle"} size={15} color={"black"} /></View>
+                    <View><MaterialIcons name={"circle"} size={15} color={"#000"} /></View>
                 </Marker>
                 <Marker
                     coordinate={destinationLoc}
                     title={"Destination"}
 
                 >
-                    <View><MaterialIcons name={"location-on"} size={25} color={"black"} /></View>
+                    <View><MaterialIcons name={"location-on"} size={25} color={"#000"} /></View>
                 </Marker>
             </MapView>
         </View>

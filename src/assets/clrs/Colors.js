@@ -7,10 +7,11 @@ const COLORS = {
     greyfont: "#cacaca",
     green: '#2fdb5a',
     blue: '#21f',
-    activeTintColor: '#f19d38',
+    activeTintColor: '#ff870f',
     inactiveTintColor: '#000',
     logoutRed: '#ff4444', 
     orange: '#ff870f',
+    
     
 }
 //GraphQL API KEY: da2-aiamlokunjahhddkzsc4h4cv4a 
