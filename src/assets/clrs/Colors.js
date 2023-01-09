@@ -4,14 +4,15 @@ const COLORS = {
     dark: '#000',
     search: '#ccc',
     light: '#f9f9f9',
-    secondarylight: '#B4AEE8',
     greyfont: "#cacaca",
     green: '#2fdb5a',
     blue: '#21f',
-    activeTintColor:'#000',
-    inactiveTintColor:'#c0c0c0',
-    logoutRed: '#ff4444',
+    activeTintColor: '#f19d38',
+    inactiveTintColor: '#000',
+    logoutRed: '#ff4444', 
+    orange: '#ff870f',
+    
 }
 //GraphQL API KEY: da2-aiamlokunjahhddkzsc4h4cv4a 
 
-export default COLORS;
+export default COLORS; 

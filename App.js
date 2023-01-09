@@ -21,6 +21,7 @@ import awsconfig from './src/aws-exports';
 Amplify.configure(awsconfig);
 
 const App = () => {
+  console. disableYellowBox = true;
 
   const androidPermission = async () => {
     try {
