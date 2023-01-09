@@ -6,14 +6,18 @@ import {
 import React from 'react'
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import COLORS from '../assets/clrs/Colors';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const PreviousDestination = () => {
     return (
-        <View style={styles.row}>
-            <View style={styles.iconContainer}>
-                <AntDesign name={'clockcircle'} size={16} color={'#fff'} />
-            </View>
-            <Text style={styles.prevDest}> Karachi Company Bus Stop</Text>
+        <View >
+            <TouchableOpacity style={styles.row}>
+                <View style={styles.iconContainer}>
+                    <AntDesign name={'clockcircle'} size={16} color={'#fff'} />
+                </View>
+                <Text style={styles.prevDest}> Karachi Company Bus Stop</Text>
+            </TouchableOpacity>
+
 
         </View>
     )
@@ -32,7 +36,7 @@ const styles = StyleSheet.create({
     },
 
     iconContainer: {
-        backgroundColor: '#cccccc',
+        backgroundColor: COLORS.dark,
         padding: 10,
         borderRadius: 25,
 

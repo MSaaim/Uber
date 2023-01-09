@@ -33,11 +33,11 @@ const SettingsScreen = () => {
 
                 </View>
 
-                <Pressable onPress={() => { console.warn("hello 1") }}>
+                <Pressable onPress={() => { console.warn("Screen Not Implemened") }}>
                     <Text style={styles.doMore}>Do More with your Account!!</Text>
                 </Pressable>
 
-                <Pressable onPress={() => { console.warn("hello 2") }}>
+                <Pressable onPress={() => { console.warn("Screen Not Implemened") }}>
                     <Text style={styles.moneyDriving}>Make Money Driving</Text>
                 </Pressable>
             </View>

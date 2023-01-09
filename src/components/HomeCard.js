@@ -6,17 +6,20 @@ import {
 import React from 'react'
 import Entypo from 'react-native-vector-icons/Entypo';
 import COLORS from '../assets/clrs/Colors';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const HomeCard = () => {
     return (
         <View>
-            <View style={styles.row}>
-                <View style={styles.iconContainer}>
-                    <Entypo name={'home'} size={16} color={'#fff'} />
+            <TouchableOpacity>
+                <View style={styles.row}>
+                    <View style={styles.iconContainer}>
+                        <Entypo name={'home'} size={16} color={'#fff'} />
+                    </View>
+                    <Text style={styles.prevDest}> COMSATS University Islamabad</Text>
                 </View>
-                <Text style={styles.prevDest}> COMSATS University Islamabad</Text>
+            </TouchableOpacity>
 
-            </View>
         </View>
     )
 }

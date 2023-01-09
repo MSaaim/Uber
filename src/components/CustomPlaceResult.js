@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
 
   },
   iconContainer: {
-    backgroundColor: '#a2a2a2',
+    backgroundColor: '#000',
     padding: 5,
     borderRadius: 50,
     marginRight: 10

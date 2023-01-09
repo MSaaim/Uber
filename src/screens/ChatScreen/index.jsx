@@ -11,15 +11,15 @@ import Ionicons from 'react-native-vector-icons/Ionicons'
 
 const ChatScreen = () => {
   return (
-    <View style={styles.mainContainer}>
+    <KeyboardAvoidingView style={styles.mainContainer}>
 
       <Text style={styles.headingText}>Chatting with Driver</Text>
-      <View style={styles.messageBoxPos}>
+      <KeyboardAvoidingView style={styles.messageBoxPos}>
         <KeyboardAvoidingView style={styles.chatBar}>
           <CustomInput placeholder={'Enter Message'} style={styles.messageBox} />
           <Ionicons name='send' size={30} color={COLORS.orange} />
         </KeyboardAvoidingView>
-      </View>
+      </KeyboardAvoidingView>
 
       <View style={styles.dummyChat} >
         <Text style={styles.dummyText}>Hello</Text>
@@ -27,7 +27,7 @@ const ChatScreen = () => {
       </View>
 
 
-    </View>
+    </KeyboardAvoidingView>
   )
 }
 

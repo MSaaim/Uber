@@ -89,7 +89,7 @@ const DestinationSearch = () => {
                         right: 10,
                     },
                     separator: {
-                        backgroundColor: COLORS.grey,
+                        backgroundColor: COLORS.dark,
                         height: 1
                     }
                 }}

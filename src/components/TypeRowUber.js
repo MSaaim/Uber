@@ -99,6 +99,6 @@ const styles = StyleSheet.create({
         fontSize: 13,
         marginLeft: 5,
         color: '#000'
+    },
 
-    }
 })

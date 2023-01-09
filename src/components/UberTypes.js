@@ -12,6 +12,7 @@ import COLORS from '../assets/clrs/Colors'
 
 const UberTypes = () => {
     const confirm = () => {
+        console.warn("Order has been confirmed")
 
     }
     return (
@@ -22,12 +23,6 @@ const UberTypes = () => {
             <CustomButton text={'Confirm Ride'} style={styles.CustomButton}
                 onPress={confirm}
             />
-
-            {/* <Pressable onPress={confirm} style={styles.Pressable}>
-                <Text style={{color:COLORS.light, fontWeight: 'bold'}}>
-                    Confirm Uber
-                </Text>
-            </Pressable> */}
 
         </View>
     )
