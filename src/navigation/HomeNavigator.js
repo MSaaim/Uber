@@ -4,8 +4,6 @@ import HomeScreen from '../screens/HomeScreen'
 import DestinationSearch from '../screens/DestinationSearch'
 import SearchResults from '../screens/SearchResults'
 import { createStackNavigator } from '@react-navigation/stack'
-import { createDrawerNavigator } from '@react-navigation/drawer'
-import { NavigationContainer } from '@react-navigation/native'
 
 const Stack = createStackNavigator();
 const HomeNavigator = () => {

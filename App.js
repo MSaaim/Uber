@@ -12,7 +12,6 @@ import React from 'react'
 import { useEffect } from 'react';
 import RouteNavigator from './src/navigation/RouteNavigator'
 import { withAuthenticator } from 'aws-amplify-react-native';
-
 navigator.geolocation = require('@react-native-community/geolocation');
 
 import { Amplify } from 'aws-amplify';
@@ -20,8 +19,7 @@ import awsconfig from './src/aws-exports';
 
 Amplify.configure(awsconfig);
 
-const App = () => {
-  console. disableYellowBox = true;
+const App = () => {  
 
   const androidPermission = async () => {
     try {

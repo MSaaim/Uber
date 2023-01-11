@@ -8,10 +8,8 @@ import {
     View
 } from 'react-native'
 import React from 'react'
-import COLORS from '../assets/clrs/Colors'
 import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps'; // remove PROVIDER_GOOGLE import if not using Google Maps
 import cars from '../assets/data/cars'
-import { transform } from '@babel/core';
 
 const HomeMap = () => {
     const getImage = (type) => {

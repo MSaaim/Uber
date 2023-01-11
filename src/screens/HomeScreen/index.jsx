@@ -6,7 +6,6 @@ import {
 import React from 'react'
 import HomeMap from '../../components/HomeMap'
 import HomeSearch from '../../components/HomeSearch'
-import COLORS from '../../assets/clrs/Colors'
 import PreviousDestination from '../../components/PreviousDestination'
 import HomeCard from '../../components/HomeCard'
 const HomeScreen = () => {

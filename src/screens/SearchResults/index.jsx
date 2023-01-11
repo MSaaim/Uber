@@ -4,10 +4,8 @@ import {
   View
 } from 'react-native'
 import React from 'react'
-import HomeMap from '../../components/HomeMap'
 import UberTypes from '../../components/UberTypes'
 import RouteMap from '../../components/RouteMap'
-import { useRoute } from '@react-navigation/native'
 
 const SearchResults = (props) => {
 

@@ -9,8 +9,6 @@ import { TouchableOpacity } from 'react-native-gesture-handler'
 import Entypo from 'react-native-vector-icons/Entypo';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-
-
 const WalletScreen = () => {
   return (
     <View style={styles.mainContainer}>

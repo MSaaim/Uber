@@ -8,7 +8,6 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import COLORS from '../assets/clrs/Colors';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import { text } from 'stream/consumers';
 
 const HistoryCard = ({placeName,price, date}) => {
     return (
